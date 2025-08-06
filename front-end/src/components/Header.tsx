@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import TicketPurchaseSummary from './TicketPurchaseSummary';
+import Ticket from './Ticket';
 
 export default function Header() {
   return (
@@ -65,31 +67,32 @@ export default function Header() {
           <Image 
             src="/logos/AskIcon.svg"
             alt="Ask Icon"
-            className="object-contain"
             width={24}
             height={24}
           />
           <div className="h-[29px] w-[1px] bg-[#E7E9ED]"></div>
-        
+        <div className='flex items-center gap-2'>
         <Image 
           src="/logos/PersonIcon.svg"
           alt="User Icon"
-          className="object-contain"
           width={24}
           height={24}
+          
         />
         <p className='text-[#4070F4] font-bold'> Entrar </p>
-        <div className='bg-[#0045F3] rounded-[4px] flex items-center  gap-2 px-4 py-1'>
+        </div>
+        <div className='bg-[#0045F3]  relative rounded-[4px] flex items-center  gap-2 px-4 py-1'>
             <Image 
               src="/carrinho.svg"
               alt="Carrinho Icon"
-              className="object-contain"
               width={37}
               height={37}
             />
             <p className='text-white font-bold rounded-full  px-[9px] py-[4px] bg-[#FFFFFF14]'> {0} </p>
+            <TicketPurchaseSummary/>
           </div>
       </div>
+
 
 
     </header>

@@ -8,10 +8,10 @@ import ReviewScore from './ReviewScore'
 
 export default function Filtro() {
   return (
-    <div className='flex flex-col p-4 shadow-md mb-2 bg-white'>
-        <div className='flex justify-between max-w-[319px]'>
-            <p className='font-bold text-md'> Filtro</p>
-            <button className='text-[#3570BF] text-sm cursor-pointer'> Limpar todos os filtros</button>
+    <div className='flex flex-col p-4 shadow-md w-full bg-white'>
+        <div className='flex justify-between '>
+            <p className='font-bold text-md '> Filtro</p>
+            <button className='text-[#3570BF] text-sm text-end cursor-pointer'> Limpar todos os filtros</button>
 
         </div>
         <HorizontalBar/>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function SearchBar() {
   return (
-    <div className="flex border border-[#E7E9ED]  pl-1 w-full rounded-md">
+    <div className="flex border border-[#E7E9ED]  pl-1  rounded-md bg-white">
       <div className='flex items-center justify-between w-full '>
         <div className='flex items-center gap-2'>
           <button className="ml-2">

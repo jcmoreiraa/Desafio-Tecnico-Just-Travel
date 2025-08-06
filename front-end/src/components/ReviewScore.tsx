@@ -16,7 +16,7 @@ export default function ReviewScore() {
 
       <div className='flex flex-col gap-3'>
         {ratings.map((rating, index) => (
-          <div key={index} className='flex gap-3'>
+          <div key={index} className='flex gap-3 cursor-pointer '>
             <div className='relative w-[189px] h-[30px] bg-[#D9D9D9]'>
               <div 
                 className=' h-full bg-[#FFAD0D]' 

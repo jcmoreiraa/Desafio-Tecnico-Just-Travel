@@ -22,7 +22,7 @@ const togglePropertySelection = (value: string) => {
   };
   return (
     <div className='flex flex-col gap-4'>
-      <h2 className='font-bold text-md'>Propriedade</h2>
+      <h2 className='font-bold text-md'>Tipo de propriedade</h2>
       <div className='flex flex-col gap-2 max-w-[319px]'>     
         {property.map((item) => (
             <div className='flex items-center gap-2 ' key={item.value}>

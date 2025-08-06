@@ -1,22 +1,25 @@
-import Filtro from "@/components/Filtro";
+import Filtro from "@/components/Filter";
 import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
+import TicketList from "@/components/TicketList";
+import TicketPurchaseSummary from "@/components/TicketPurchaseSummary";
 
 export default function Home() {
   return (
     <>
-      <Header />
       
       <div className="px-[60px] mx-auto mt-8 mb-8 ">
         <SearchBar />
       </div>
 
-      <main className="px-[60px]  bg-[#F6F6F6] flex  gap-10 ">
-        <div className="flex max-w-[367px] mt-8">
+      <main className="px-[60px]  bg-[#F6F6F6] flex gap-8 ">
+        <div className="flex w-[37%] h-full mt-8">
           <Filtro />
-          
         </div>
-        <p>oiii</p>
+       <div className="mt-8  w-full">
+         <TicketList />
+         
+       </div>
       </main>
     </>
   );
