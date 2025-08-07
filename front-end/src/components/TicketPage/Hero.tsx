@@ -1,4 +1,6 @@
+'use client'
 import Image from 'next/image';
+import { useRouter } from 'next/navigation'; 
 import React from 'react'
 interface HeroProps {
         name: string;
@@ -8,16 +10,20 @@ interface HeroProps {
     };
 
 export default function Hero({ name, location, image }: HeroProps) {
+  const router = useRouter();
+
   return (
     <div>
         <div className='flex items-center gap-4'>
+          <button onClick={() => router.push('/')}>
         <Image
-        src={'/leftArrow.svg'}
+        src={'/comeBack.svg'}
         alt="Left Arrow"
         width={24}
         height={24}
-        className='mb-3'
-        />  
+        className='mb-3 cursor-pointer'
+        /> 
+        </button> 
         <h1 className="text-2xl text-[#0A2156] font-bold">{name}</h1>
         </div>
         <div className='flex items-center pl-9  gap-2 '>

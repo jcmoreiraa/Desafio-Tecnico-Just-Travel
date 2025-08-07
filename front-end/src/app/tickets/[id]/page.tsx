@@ -1,9 +1,9 @@
 'use client';
-import AmenitiesList from '@/components/AmenitiesList';
-import Description from '@/components/Description';
-import Hero from '@/components/Hero';
-import Location from '@/components/Location';
-import TicketSummaryCard from '@/components/TicketSummaryCard';
+import AmenitiesList from '@/components/TicketPage/AmenitiesList';
+import Description from '@/components/TicketPage/Description';
+import Hero from '@/components/TicketPage/Hero';
+import Location from '@/components/TicketPage/Location';
+import TicketSummaryCard from '@/components/TicketPage/TicketSummaryCard';
 import { useParams } from 'next/navigation';
 import  { useEffect, useState } from 'react';
 
@@ -64,12 +64,12 @@ export default function TicketPage() {
     <main className="px-[60px] pt-8 pb-8 ">
       <Hero name={ticket.name} location={ticket.location} image={ticket.image} />
       <div className='flex gap-10 mt-8'>
-      <div className='flex  max-w-[70%] flex-col '>
+      <div className='flex  w-[70%] flex-col '>
       <AmenitiesList rating={ticket.rating} />
       <Description description={ticket.description} />
       <Location location={ticket.location} />
       </div>
-      <TicketSummaryCard price={ticket.price}  />
+      <TicketSummaryCard price={ticket.price} image = {ticket.image} id={ticket.id}  name={ticket.name} />
       </div>
     </main>
   );

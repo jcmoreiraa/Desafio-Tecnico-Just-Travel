@@ -1,12 +1,20 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
-import TicketPurchaseSummary from './TicketPurchaseSummary';
-import Ticket from './Ticket';
+import TicketPurchaseSummary from './Tickets/TicketPurchaseSummary';
+import Ticket from './Tickets/Ticket';
+import { useCartStore } from './Tickets/cartStore';
 
 export default function Header() {
 
     const [purchasedTickets, setPurchasedTickets] = useState<boolean>(false); 
+
+    const CartIndicatore = () => {
+  const itemCount = useCartStore(state => state.countCartItems());
+  return itemCount;
+  
+  
+}
 
   return (
     <header className="border-b-[0.8px] border-[#E7E9ED] py-6 px-[60px] flex justify-between items-center">
@@ -94,7 +102,7 @@ export default function Header() {
               width={37}
               height={37}
             />
-            <p className='text-white font-bold rounded-full  px-[9px] py-[4px] bg-[#FFFFFF14]'> {0} </p>
+            <p className='text-white font-bold rounded-full  px-[9px] py-[4px] bg-[#FFFFFF14]'> {CartIndicatore()} </p>
           </div>
 
           </button>

@@ -1,8 +1,6 @@
 import Filtro from "@/components/Filter";
-import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
-import TicketList from "@/components/TicketList";
-import TicketPurchaseSummary from "@/components/TicketPurchaseSummary";
+import TicketList from "@/components/Tickets/TicketList";
 
 export default function Home() {
   return (

@@ -5,7 +5,7 @@ interface LocationProps {
 }
 
 export default function Location({ location }: LocationProps) {
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`;
+  const mapSrc = `https://www.google.com/maps?q=${(location)}&output=embed`;
 
   return (
     <div className='space-y-3 mt-6'>

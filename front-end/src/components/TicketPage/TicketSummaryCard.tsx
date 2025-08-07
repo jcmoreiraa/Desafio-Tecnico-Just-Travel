@@ -1,16 +1,36 @@
 import React from 'react';
-import HorizontalBar from './HorizontalBar';
+import HorizontalBar from '../HorizontalBar';
 import Image from 'next/image';
+import { useCartStore } from '../Tickets/cartStore';
+
 interface TicketSummaryCardProps {
 price: {
     full: number;
     discount: number;
   };
+    image: string
+    id: string
+    name:string
+
 }
 
 export default function TicketSummaryCard({
-  price,
+  price, image, id, name
 }: TicketSummaryCardProps) {
+  const addToCart = useCartStore((state) => state.addItem);
+
+const handleAddToCart = () => {
+  addToCart({
+    id: id,
+    name: name,
+    quantity: 1,
+    price: price.discount,
+    image: image
+  });
+};
+
+
+  
   return (
     <div className="bg-white max-w-[25%] bg-black h-full w-full rounded-md  p-6 ">
       <div className="flex justify-between items-center ">
@@ -58,10 +78,12 @@ export default function TicketSummaryCard({
       </div>
       
       <button
-        className="w-full text-md bg-[#4070F4] hover:bg-blue-700 text-white font-bold py-5 px-10 rounded-sm "
-      >
-        Comprar Ingresso
-      </button>
+  onClick={handleAddToCart}
+  className="w-full text-md bg-[#4070F4] hover:bg-blue-700 text-white font-bold py-5 px-10 rounded-sm "
+>
+  Comprar Ingresso
+</button>
+
     </div>
   );
 }
