@@ -1,9 +1,13 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import Image from 'next/image';
 import TicketPurchaseSummary from './TicketPurchaseSummary';
 import Ticket from './Ticket';
 
 export default function Header() {
+
+    const [purchasedTickets, setPurchasedTickets] = useState<boolean>(false); 
+
   return (
     <header className="border-b-[0.8px] border-[#E7E9ED] py-6 px-[60px] flex justify-between items-center">
       <div className='flex items-center'>
@@ -81,6 +85,8 @@ export default function Header() {
         />
         <p className='text-[#4070F4] font-bold'> Entrar </p>
         </div>
+        <div className='relative'>
+        <button className='cursor-pointer' onClick={() => setPurchasedTickets(!purchasedTickets)} >
         <div className='bg-[#0045F3]  relative rounded-[4px] flex items-center  gap-2 px-4 py-1'>
             <Image 
               src="/carrinho.svg"
@@ -89,8 +95,14 @@ export default function Header() {
               height={37}
             />
             <p className='text-white font-bold rounded-full  px-[9px] py-[4px] bg-[#FFFFFF14]'> {0} </p>
-            <TicketPurchaseSummary/>
           </div>
+
+          </button>
+            <TicketPurchaseSummary  purchasedTickets={purchasedTickets} />
+
+              </div>
+
+
       </div>
 
 
