@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import React, { useState } from 'react';
 
 export default function PriceFilter() {
@@ -20,19 +21,22 @@ export default function PriceFilter() {
   };
 
   return (
-    <div className='flex flex-col gap-2 max-w-[300px]'>
-      <p className='text-sm font-bold'>Preço</p>
+    <div className="flex flex-col gap-4 max-w-[90%]">
+      <p className="text-sm font-bold">Preço</p>
       
-      <div className='grid grid-cols-2 gap-2'>
+      <div className="grid grid-cols-2 gap-2">
         {priceRanges.map((price) => (
           <button
             key={price.value}
             onClick={() => togglePriceSelection(price.value)}
-            className={`py-2 px-4 border text-sm rounded-[2px]
-              ${selectedPrices.includes(price.value)
-                ? 'bg-blue-500 text-white border-blue-500'
-                : 'bg-white text-[#CED2DB] border-[#CED2DB] hover:bg-gray-50'
-              }`}
+            className={`
+              py-2 px-4 border text-sm rounded-[2px] transition-colors
+              ${
+                selectedPrices.includes(price.value)
+                  ? 'bg-blue-500 text-white border-blue-500'
+                  : 'bg-white text-[#CED2DB] border-[#CED2DB] hover:bg-gray-50'
+              }
+            `}
           >
             {price.label}
           </button>

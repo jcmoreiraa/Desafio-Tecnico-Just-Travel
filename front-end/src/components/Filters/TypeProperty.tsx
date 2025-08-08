@@ -34,16 +34,17 @@ export default function TypeProperty() {
                                 ? 'bg-blue-500 text-white border-blue-500'
                                 : 'bg-white text-[#CED2DB] border-[#CED2DB] hover:bg-gray-50'
                             }`}
-                    >   <div className='flex'>
-                        {Array.from({length: rate.value}).map((_, i) => (
-                            <Image 
-                                key={i}
-                                src="/star.svg" 
-                                alt="Star" 
-                                width={24} 
-                                height={24}
-                            />
-                        ))}
+                    >
+                        <div className='flex'>
+                            {Array.from({length: rate.value}).map((_, i) => (
+                                <Image 
+                                    key={i}
+                                    src="/icons/filters/star.svg" 
+                                    alt="Star" 
+                                    width={24} 
+                                    height={24}
+                                />
+                            ))}
                         </div>
                         <span>({rate.qnt})</span>
                     </button>

@@ -10,14 +10,14 @@ export default function ReviewScore() {
   ];
 
   return (
-    <div className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-4 max-w-[90%]'>
       <h2 className='font-bold text-md'>Review Score</h2>
     
 
       <div className='flex flex-col gap-3'>
         {ratings.map((rating, index) => (
           <div key={index} className='flex gap-3 cursor-pointer '>
-            <div className='relative w-[189px] h-[30px] bg-[#D9D9D9]'>
+            <div className='relative w-[60%] h-[30px] bg-[#D9D9D9]'>
               <div 
                 className=' h-full bg-[#FFAD0D]' 
                 style={{ width: `${rating.score * 10}%` }}>

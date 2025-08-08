@@ -12,7 +12,6 @@ export default function Filter() {
         <div className='flex justify-between '>
             <p className='font-bold text-md '> Filtro</p>
             <button className='text-[#3570BF] text-sm text-end cursor-pointer'> Limpar todos os filtros</button>
-
         </div>
         <HorizontalBar/>
         <PriceFilter/>
@@ -24,7 +23,6 @@ export default function Filter() {
         <Property/>
         <HorizontalBar/>
         <ReviewScore/>
-      
     </div>
   )
 }

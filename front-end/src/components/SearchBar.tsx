@@ -27,7 +27,11 @@ export default function SearchBar() {
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center gap-2">
           <button className="ml-2">
-            <Image src="/gps.svg" alt="GPS Icon" width={24} height={24} />
+            <Image src="/icons/ticket/location.svg" 
+            alt="location Icon"
+            width={24}
+            height={24}
+            />
           </button>
           <input
             type="text"
@@ -42,7 +46,11 @@ export default function SearchBar() {
           className="border-x border-[#E7E9ED] w-[48px] h-[48px] flex items-center justify-center ml-2 cursor-pointer"
           onClick={handleSearch}
         >
-          <Image src="/lupa.svg" alt="Lupa de pesquisa" width={24} height={24} />
+          <Image src="/icons/navigation/search.svg" 
+           alt="search icon"
+           width={24} 
+           height={24} 
+           />
         </div>
       </div>
     </div>

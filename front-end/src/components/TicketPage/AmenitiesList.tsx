@@ -8,6 +8,9 @@ interface AmenitiesProps {
   };
 }
 export default function AmenitiesList({ rating }: AmenitiesProps) {
+
+  const path = '/icons/ticket/'
+
   return (
     <div className='flex flex-col gap-6 '>
       <div className='flex items-center gap-2 '>
@@ -19,10 +22,10 @@ export default function AmenitiesList({ rating }: AmenitiesProps) {
           </div>
 
 
-<div className='flex gap-2 text-[#9EA5B8]'>
+      <div className='flex gap-2 text-[#9EA5B8]'>
           <Image
-        src={'/travel.svg'}
-        alt="Amenities Icon"
+        src={`${path}flight.svg`}
+        alt="flight icon"
         width={18}
         height={18}
         
@@ -30,22 +33,22 @@ export default function AmenitiesList({ rating }: AmenitiesProps) {
       <p> Passagem  Aérea</p>
 
       <Image
-        src={'/Wifi.svg'}
-        alt="Wifi Icon"
+        src={`${path}wifi.svg`}
+        alt="wifi Icon"
         width={18}
         height={18}
       />
       <p> Wi-fi</p>
         <Image
-            src={'/coffe.svg'}
-            alt="Coffe Icon"
+            src={`${path}breakfast.svg`}
+            alt="breakfast Icon"
             width={18}
             height={18}
           />
           <p> Café da manhã</p>
           <Image
-            src={'/home.svg'}
-            alt="Home Icon"
+            src={`/icons/filters/house.svg`}
+            alt="house Icon"
             width={18}
             height={18}
           />

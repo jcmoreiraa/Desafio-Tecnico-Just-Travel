@@ -37,7 +37,7 @@ export default function TicketPurchaseSummary({ purchasedTicket }: TicketPurchas
             <header className='flex justify-between items-start'>
               <p className='text-[#646981]'>{item.name}</p>
               <button className=' cursor-pointer' onClick={() => removeItem(item.id)}>
-                <Image src="/TrashIcon.svg" alt="Remover" width={20} height={20} />
+                <Image src="/icons/cart/trash.svg" alt="Remover" width={20} height={20} />
               </button>
             </header>
 
@@ -65,29 +65,29 @@ export default function TicketPurchaseSummary({ purchasedTicket }: TicketPurchas
 
       <div className='flex justify-between text-[#868A9D] text-md'>
         <p>Ingressos</p>
-        <p>R$ {total}</p>
+        <p>R$ {total.toFixed(2)}</p>
       </div>
 
       <div className='flex justify-between font-bold text-[#0A2156] text-md'>
         <p>Subtotal</p>
-        <p>R$ {total}</p>
+        <p>R$ {total.toFixed(2)}</p>
       </div>
 
       <div className='flex justify-between text-[#868A9D] text-md'>
-        <p>1x de R$ {finalPrice} com desconto de <span className='text-[#00919E]'>(7%)</span></p>
-        <p className='font-bold text-[#00919E]'>- R$ {discount}</p>
+        <p>1x de R$ {finalPrice.toFixed(2)} com desconto de <span className='text-[#00919E]'>(7%)</span></p>
+        <p className='font-bold text-[#00919E]'>- R$ {discount.toFixed(2)}</p>
       </div>
 
       <div className='flex justify-between text-[#868A9D] text-md'>
         <p>10x sem juros de R$ {(total / 10)}</p>
-        <p className='font-bold'>R$ {total}</p>
+        <p className='font-bold'>R$ {total.toFixed(2)}</p>
       </div>
 
       <HorizontalBar mt='mt-3' mb='mb-4' />
 
       <div className='flex justify-between text-[#0A2156] text-md font-bold'>
         <p>Valor total</p>
-        <p className='text-[#4070F4] text-lg font-normal'>R$ {total}</p>
+        <p className='text-[#4070F4] text-lg font-normal'>R$ {total.toFixed(2)}</p>
       </div>
 
       <button className='bg-[#0045F3] text-white text-lg py-4 font-semibold rounded-md hover:bg-[#0038C1] transition-colors'>
