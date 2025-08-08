@@ -1,7 +1,7 @@
 import React from 'react';
 import HorizontalBar from '../HorizontalBar';
 import Image from 'next/image';
-import { useCartStore } from '../Tickets/cartStore';
+import { useCartStore } from '../../store/cartStore';
 
 interface TicketSummaryCardProps {
 price: {

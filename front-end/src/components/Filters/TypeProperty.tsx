@@ -35,7 +35,7 @@ export default function TypeProperty() {
                                 : 'bg-white text-[#CED2DB] border-[#CED2DB] hover:bg-gray-50'
                             }`}
                     >   <div className='flex'>
-                        {Array(rate.value).fill(0).map((_, i) => (
+                        {Array.from({length: rate.value}).map((_, i) => (
                             <Image 
                                 key={i}
                                 src="/star.svg" 

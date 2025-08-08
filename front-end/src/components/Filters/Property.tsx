@@ -33,10 +33,12 @@ const togglePropertySelection = (value: string) => {
               <Image  src={item.src} 
               alt={item.value}
                width={18} 
-               height={18}/>
+               height={18}
+               className='text-blue'
+               />
               {item.value}
               <span className={`text-xs  ${selectedProperties.includes(item.value)
-                ? ' text-red ' : ' text-[#CED2DB]  '}`} >({item.qnt})</span>
+                ? '  ' : ' text-[#CED2DB]  '}`} >({item.qnt})</span>
             </button>
             </div>
 
