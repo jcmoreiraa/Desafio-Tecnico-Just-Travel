@@ -20,7 +20,7 @@ export default function TicketPurchaseSummary({ purchasedTicket }: TicketPurchas
   const finalPrice = total - discount;
 
   return (
-    <section className='absolute z-50 top-20 right-10 flex flex-col border border-gray-200 gap-4 bg-white shadow-md w-[500px] max-h-[90vh] overflow-y-auto rounded-md p-6'>
+    <section className='absolute z-50 top-20 right-0 flex flex-col border border-gray-200 gap-4 bg-white shadow-md w-[500px] max-h-[90vh] overflow-y-auto rounded-md p-6'>
       <h1 className='text-md font-bold'>Ingressos</h1>
 
       {cartItems.map((item) => (
@@ -62,7 +62,7 @@ export default function TicketPurchaseSummary({ purchasedTicket }: TicketPurchas
         </div>
       ))}
 
-      <HorizontalBar mt='mt-3' mb='mb-3' />
+      <HorizontalBar mt='mt-2' mb='mb-2' />
 
       <div className='flex justify-between text-[#868A9D] text-md'>
         <p>Ingressos</p>
@@ -84,7 +84,7 @@ export default function TicketPurchaseSummary({ purchasedTicket }: TicketPurchas
         <Price color='#A2A4B1' size='md'>R$ {total.toFixed(2)} </Price>
       </div>
 
-      <HorizontalBar mt='mt-3' mb='mb-4' />
+      <HorizontalBar mt='mt-2' mb='mb-2' />
 
       <div className='flex justify-between text-[#0A2156] text-md font-bold'>
         <p>Valor total</p>
