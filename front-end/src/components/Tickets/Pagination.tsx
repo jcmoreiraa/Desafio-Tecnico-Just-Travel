@@ -35,7 +35,7 @@ export default function Pagination({
         <select
           value={currentPage}
           onChange={(e) => goToPage(Number(e.target.value))}
-          className="border-[0.8px] border-[#8A90BD] rounded-md px-2 py-1 text-sm pr-6 bg-white text-[#828292]"
+          className="border-[0.8px] border-[#8A90BD] rounded-md px-2 py-1 text-sm pr-6 bg-white text-[#828292] cursor-pointer bg-black"
         >
           {Array.from({ length: totalPages }).map((_, i) => (
             <option key={i + 1} value={i + 1}>
@@ -49,14 +49,14 @@ export default function Pagination({
         <button
           onClick={() => goToPage(currentPage - 1)}
           disabled={currentPage === 1}
-          className="p-2 disabled:opacity-30"
+          className="p-2 disabled:opacity-30 "
         >
           <Image
             src="icons/navigation/pagination-prev.svg"
             alt="arrow-left icon"
             width={24}
             height={24}
-            className={currentPage === 1 ? 'opacity-60' : ''}
+            className={currentPage === 1 ? 'opacity-60' : 'cursor-pointer'}
           />
         </button>
 
@@ -64,8 +64,8 @@ export default function Pagination({
           <button
             key={page}
             onClick={() => goToPage(page)}
-            className={`w-8 h-8 rounded text-[#455CC7] transition ${
-              currentPage === page ? 'bg-blue-500 text-white' : 'hover:bg-gray-100'
+            className={`w-8 h-8 rounded text-[#455CC7] transition  ${
+              currentPage === page ? 'bg-blue-500 text-white cursor-auto' : 'hover:bg-gray-100 cursor-pointer'
             }`}
           >
             {page}
@@ -79,14 +79,14 @@ export default function Pagination({
         <button
           onClick={() => goToPage(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="p-2 disabled:opacity-30"
+          className="p-2 disabled:opacity-30 "
         >
           <Image
             src="icons/navigation/pagination-next.svg"
             alt="Próxima página"
             width={24}
             height={24}
-            className={currentPage === totalPages ? 'opacity-60' : ''}
+            className={currentPage === totalPages ? 'opacity-60' : 'cursor-pointer'}
           />
         </button>
       </div>

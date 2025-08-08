@@ -2,6 +2,7 @@ import React from 'react';
 import HorizontalBar from '../HorizontalBar';
 import Image from 'next/image';
 import { useCartStore } from '../../store/cartStore';
+import Price from '../Price';
 
 interface TicketSummaryCardProps {
   price: {
@@ -87,11 +88,11 @@ export default function TicketSummaryCard({
       <div className="space-y-3 mb-6 text-[#9EA5B8] text-base">
         <div className="flex justify-between pb-2">
           <span>01 Ingresso Infantil</span>
-          <span className="font-medium">R$245,99</span>
+          <Price size='md'>R$245,99</Price>
         </div>
         <div className="flex justify-between pb-2">
           <span>02 Ingressos Adultos</span>
-          <span className="font-medium">R$245,99</span>
+          <Price size='md'>R$245,99</Price>
         </div>
       </div>
 
@@ -99,9 +100,7 @@ export default function TicketSummaryCard({
 
       <div className="flex justify-between text-base text-[#0A2156] font-bold mb-6">
         <span>Valor total</span>
-        <span className='text-[#4070F4] text-2xl'>
-          R$ {price.discount}
-        </span>
+        <Price size='2xl' color='#4070F4'>R$ {price.discount}</Price>  
       </div>
 
       <button

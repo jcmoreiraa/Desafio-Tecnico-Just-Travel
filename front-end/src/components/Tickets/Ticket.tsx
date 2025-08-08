@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image'; 
 import { useRouter } from 'next/navigation'; 
+import Price from '../Price';
 
 interface TicketProps {
   id: number;
@@ -71,15 +72,16 @@ export default function Ticket(ticket: TicketProps) {
         <div className='flex items-center'>
           <div className='w-[1px] h-[166px] bg-[#CED2DB] mx-6'></div>
           <div className='flex flex-col'>
-            <p className='text-[#858FA6] text-sm self-start'>
-              de R$ {ticket.price.full.toFixed(2)} por
-            </p>
-            <p className='text-2xl font-bold text-[#4070F4] flex self-start gap-[4px]'>
-              <span className='text-sm text-[#0A2156]'>R$</span>
-              {ticket.price.discount}
-            </p>
+            
+            <Price> {`de R$ ${ticket.price.full.toFixed(2)} por`} </Price>
+            
+            <Price alignSelf="self-start font-bold flex gap-[4px]" color="#4070F4" size="2xl">
+              <span className="text-sm text-[#0A2156]">R$</span>
+               {ticket.price.discount}
+            </Price>
+
             <button 
-              className='mt-4 gap-3 flex px-7 py-3 bg-[#4070F4] text-white text-sm rounded hover:bg-[#3058c7] transition'
+              className='mt-4 gap-3 flex px-7 py-3 bg-[#4070F4] text-white text-sm rounded hover:bg-[#3058c7] transition cursor-pointer'
               onClick={() => router.push(`/tickets/${ticket.id}`)}
             >
               Saber mais

@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import HorizontalBar from '../HorizontalBar';
 import { useCartStore } from '../../store/cartStore';
+import Price from '../Price';
 
 interface TicketPurchaseSummaryProps {
   purchasedTicket: boolean
@@ -41,53 +42,53 @@ export default function TicketPurchaseSummary({ purchasedTicket }: TicketPurchas
               </button>
             </header>
 
-            <div className='flex gap-4 text-[#989AA7] text-sm'>
-              <span>1 Adulto: R$ {item.price}</span>
-              <span>2 Crianças: R$ {(item.price * 0.9)}</span>
+            <div className='flex gap-4'>
+              <Price color='#989AA7'>1 Adulto: R$ {item.price}</Price>
+              <Price color='#989AA7'>2 Crianças: R$ {(item.price * 0.9)}</Price>
             </div>
 
             <HorizontalBar mt='mt-1' mb='mb-1' />
 
-            <div className='flex justify-between text-[#646981]'>
-              <span>Qtd {item.quantity}</span>
-              <span>R$ {(item.quantity * item.price)}</span>
+            <div className='flex justify-between'>
+             <Price color='#646981' size='md'> Qtd {item.quantity} </Price>
+              <Price color='#646981' size='md'>R$ {(item.quantity * item.price)}</Price>
             </div>
 
             <div className='flex justify-between mt-2 font-bold text-[#0A2156]'>
-              <span>Subtotal</span>
-              <span>R$ {(item.quantity * item.price)}</span>
+              <span>Subtotal  </span>
+              <Price size='md' color='#17191C' alignSelf=''>R$ {(item.quantity * item.price)} </Price>
             </div>
           </div>
         </div>
       ))}
 
-      <HorizontalBar mt='mt-4' />
+      <HorizontalBar mt='mt-3' mb='mb-3' />
 
       <div className='flex justify-between text-[#868A9D] text-md'>
         <p>Ingressos</p>
-        <p>R$ {total.toFixed(2)}</p>
+        <Price color='#868A9D' size='md'>R$ {total.toFixed(2)}</Price>
       </div>
 
       <div className='flex justify-between font-bold text-[#0A2156] text-md'>
         <p>Subtotal</p>
-        <p>R$ {total.toFixed(2)}</p>
+        <Price color='#17191C' size='md'>R$ {total.toFixed(2)}</Price>
       </div>
 
-      <div className='flex justify-between text-[#868A9D] text-md'>
-        <p>1x de R$ {finalPrice.toFixed(2)} com desconto de <span className='text-[#00919E]'>(7%)</span></p>
-        <p className='font-bold text-[#00919E]'>- R$ {discount.toFixed(2)}</p>
+      <div className='flex justify-between'>
+        <Price size='md' color='#868A9D'>1x de R$ {finalPrice.toFixed(2)} com desconto de <span className='text-[#00919E]'>(7%)</span></Price>
+        <Price color='#00919E' size='md' alignSelf='font-bold'>- R$ {discount.toFixed(2)}</Price>
       </div>
 
       <div className='flex justify-between text-[#868A9D] text-md'>
         <p>10x sem juros de R$ {(total / 10)}</p>
-        <p className='font-bold'>R$ {total.toFixed(2)}</p>
+        <Price color='#A2A4B1' size='md'>R$ {total.toFixed(2)} </Price>
       </div>
 
       <HorizontalBar mt='mt-3' mb='mb-4' />
 
       <div className='flex justify-between text-[#0A2156] text-md font-bold'>
         <p>Valor total</p>
-        <p className='text-[#4070F4] text-lg font-normal'>R$ {total.toFixed(2)}</p>
+        <Price color='#4070F4' size='2xl' alignSelf='font-normal'>{total.toFixed(2)}</Price>
       </div>
 
       <button className='bg-[#0045F3] text-white text-lg py-4 font-semibold rounded-md hover:bg-[#0038C1] transition-colors'>

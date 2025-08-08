@@ -29,7 +29,7 @@ export default function TypeProperty() {
                     <button
                         key={rate.value}
                         onClick={() => toggleRateSelection(rate.value)}
-                        className={`p-1 border text-sm rounded-[2px] flex items-center justify-center gap-2
+                        className={`p-1 border text-sm rounded-[2px] flex items-center justify-center gap-2 cursor-pointer
                             ${selectedRates.includes(rate.value)
                                 ? 'bg-blue-500 text-white border-blue-500'
                                 : 'bg-white text-[#CED2DB] border-[#CED2DB] hover:bg-gray-50'

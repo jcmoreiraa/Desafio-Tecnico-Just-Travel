@@ -30,7 +30,7 @@ export default function PriceFilter() {
             key={price.value}
             onClick={() => togglePriceSelection(price.value)}
             className={`
-              py-2 px-4 border text-sm rounded-[2px] transition-colors
+              py-2 px-4 border text-sm rounded-[2px] transition-colors cursor-pointer
               ${
                 selectedPrices.includes(price.value)
                   ? 'bg-blue-500 text-white border-blue-500'

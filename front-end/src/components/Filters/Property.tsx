@@ -30,7 +30,7 @@ export default function Property() {
             key={item.value}
             onClick={() => togglePropertySelection(item.value)}
             className={`
-              flex items-center gap-2 w-full p-2 text-sm rounded-[2px] border
+              flex items-center gap-2 w-full p-2 text-sm rounded-[2px] border cursor-pointer
               ${
                 selectedProperties.includes(item.value)
                   ? 'text-[#4070F4] border-[#4070F4]'

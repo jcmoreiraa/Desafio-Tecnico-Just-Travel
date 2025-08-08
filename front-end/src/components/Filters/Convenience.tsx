@@ -16,11 +16,11 @@ export default function Convenience() {
       
       <div className="space-y-3">
         {conveniences.map((item) => (
-          <div key={item.id} className="flex items-center gap-2">
+          <div key={item.id} className="flex items-center gap-2 ">
             <input
               type="checkbox"
               id={item.id}
-              className="w-[20px] h-[20px]"
+              className="w-[20px] h-[20px] cursor-pointer"
             />
             <label className="text-[14px]">
               {item.label}
