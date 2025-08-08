@@ -35,7 +35,6 @@ Aplicação frontend para exibição e compra de ingressos como desafio para a J
 
 ###  Pré-requisitos
 - Git
-- Docker e Docker Compose
 - Node.js 18+ 
 
 ---
@@ -54,4 +53,9 @@ npm run dev
 > Observações
 **O backend é simulado com a API do MockAPI.**
 
+---
 
+## Imagens
+![TicketHome](https://github.com/user-attachments/assets/5cb65eca-38af-441d-bc1e-788975a80dec)
+![TicketCar](https://github.com/user-attachments/assets/0edba170-5d19-4bf4-b754-3b1aad1327c8)
+![TicketPage](https://github.com/user-attachments/assets/5d020fca-6ad4-47a7-acca-5d2d6fc97168)
